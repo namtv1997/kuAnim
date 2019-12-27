@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    tools:context=".main.MainActivity">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:src="@drawable/ku_main"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginTop="@dimen/_150sdp"
+        app:layout_constraintBottom_toTopOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/content"
+        android:paddingEnd="@dimen/_30sdp"
+        android:paddingStart="@dimen/_15sdp"
+        android:textSize="@dimen/_14sdp"
+        android:layout_gravity="center_horizontal"
+        android:text="Trang Chủ"
+        android:textColor="@android:color/white"
+        android:background="@drawable/login_button"
+        android:layout_marginBottom="20dp"/>
+
+    <com.skyfishjy.library.RippleBackground
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_margin="@dimen/_30sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/content"
+        app:rb_color="#FFEB3B"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="4"
+        app:rb_duration="3000"
+        app:rb_scale="2">
+
+        <ImageView
+            android:id="@+id/imgSale"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_sale"/>
+
+        <TextView
+            android:text="KHUYẾN MÃI"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgSale"
+            android:textColor="#FFFFFF"/>
+    </com.skyfishjy.library.RippleBackground>
+
+    <com.skyfishjy.library.RippleBackground
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_margin="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/content1"
+        app:rb_color="#FFEB3B"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="4"
+        app:rb_duration="3000"
+        app:rb_scale="2">
+
+        <ImageView
+            android:id="@+id/imgSupport"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_support"/>
+        <TextView
+            android:text="HỖ TRỢ"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgSupport"
+            android:textColor="#FFFFFF"/>
+    </com.skyfishjy.library.RippleBackground>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
